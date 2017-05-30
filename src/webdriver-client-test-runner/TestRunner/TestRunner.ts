@@ -89,6 +89,10 @@ export module TestRunner {
                  { name: 'autoRunSeleniumServer', type: Boolean },
                  { name: 'updateBaselineImages', type: Boolean }
              ]);
+
+        options.config = (options as any).configPath;
+        delete options.configPath;
+
         return options;
     }
 
